@@ -1,0 +1,24 @@
+<section style="padding: 50px" ng-controller="TableCtrl">
+  <label class="grey" for="search">Поиск: </label> <br>
+  <input class="border margin_bottom none_border" id="search" ng-model="fil.$" placeholder="Search">
+  <table class="table">
+    <thead>
+    <tr class="grey">
+      <th class="font_normal cell_padding align_l fix_cell pointer border" ng-click="unSort()">№</th>
+      <th class="font_normal cell_padding align_l pointer border ellipsis" ng-click="sortID()">ID
+        <span class="aps_pos" ng-class="{'hidden':sort_by !== 'ID'}">{{reverse?'↓':'↑'}}</span></th>
+      <th class="font_normal cell_padding align_l pointer border ellipsis" ng-click="sortName()">Name
+        <span class="aps_pos" ng-class="{'hidden':sort_by !== 'name'}">{{reverse?'↓':'↑'}}</span></th>
+      <th class="font_normal cell_padding align_l pointer border ellipsis" ng-click="sortCountry()">Country
+        <span class="aps_pos" ng-class="{'hidden':sort_by !== 'country'}">{{reverse?'↓':'↑'}}</span></th>
+    </tr>
+    </thead>
+    <tr ng-repeat="value in values | orderBy:sort_by:reverse:localeSensitiveComparator | filter:fil"
+        ng-class-even="'light_blue_back'" class="row_hover row_height ">
+      <td class="cell_padding border ellipsis">{{$index + 1}}</td>
+      <td class="cell_padding border ellipsis">{{value.ID}}</td>
+      <td class="cell_padding border ellipsis">{{value.name}}</td>
+      <td class="cell_padding border ellipsis">{{value.country}}</td>
+    </tr>
+  </table>
+</section>

@@ -1,0 +1,97 @@
+html {
+    font-family: Roboto;
+    font-size: 13px;
+}
+
+/*table*/
+.row_hover:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.row_selected {
+    background-color: rgb(224, 224, 224);
+}
+
+.row_height {
+    height: 48px;
+}
+
+.cell_padding {
+    padding: 0 24px;
+}
+
+.fix_cell {
+    width: 24px;
+}
+
+.table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/*common*/
+.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.grey {
+    color: rgb(158, 158, 158)
+}
+
+.light_blue_back {
+    background-color: rgba(127, 221, 233, 0.4);
+}
+
+.font_normal {
+    font-weight: normal;
+}
+
+.align_l {
+    text-align: left;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.aps_pos {
+    position: absolute;
+}
+
+.border {
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.margin_bottom {
+    margin-bottom: 24px;
+}
+
+/*input*/
+
+.none_border {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+::-webkit-input-placeholder {
+    color: rgb(224, 224, 224);
+}
+
+::-moz-placeholder {
+    color: rgb(224, 224, 224);
+}
+
+:focus::-webkit-input-placeholder {
+    color: transparent
+}
+
+:focus::-moz-placeholder {
+    color: transparent
+}
